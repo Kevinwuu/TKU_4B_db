@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+table{
+	  border-collapse: collapse;
+}
+table tr{
+	border-bottom:1pt solid #dddddd;
+    height: 35px;
+    /* border-bottom: 1px solid #dddddd; */
+}
+table tr td{
+	text-align: center;
+	padding: 0 10px;
+}

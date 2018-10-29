@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+
+<body>
+    <h1>Product-List</h1>
+     <table>
+     	<thead>
+     		<tr>
+     			<td>Product ID</td>
+     			<td>Product name</td>
+     			<td>Price</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<% for(var i=0;i<data.length;i++) {%>
+     		<tr>
+	     		<td>
+	     			<%= data[i].id %>
+	     		</td>
+	     		<td>
+	     			<%= data[i].name %>
+	     		</td>
+	     		<td>
+	     			<%= data[i].price %>
+	     		</td>
+     		</tr>
+     		<% } %>
+     	</tbody>
+     </table>
+
+</body>
+
+</html>
