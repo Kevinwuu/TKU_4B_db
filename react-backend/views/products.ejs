@@ -6,36 +6,58 @@
         <%= title %>
     </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+        .product_list {
+            margin: 0px auto;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Product-List</h1>
-     <table>
-     	<thead>
-     		<tr>
-     			<td>Product ID</td>
-     			<td>Product name</td>
-     			<td>Price</td>
-     		</tr>
-     	</thead>
-     	<tbody>
-     		<% for(var i=0;i<data.length;i++) {%>
-     		<tr>
-	     		<td>
-	     			<%= data[i].id %>
-	     		</td>
-	     		<td>
-	     			<%= data[i].name %>
-	     		</td>
-	     		<td>
-	     			<%= data[i].price %>
-	     		</td>
-     		</tr>
-     		<% } %>
-     	</tbody>
-     </table>
+    <div class="product_list">
+        <h1>Product-List</h1>
+        <button class='btn btn-primary' onclick="add()">Add</button>
+        <table>
+            <thead>
+                <tr>
+
+                    <td><b>Product ID</b></td>
+                    <td><b>Product name</b></td>
+                    <td><b>Price</b></td>
+                    <td colspan="2"><b>Action</b></td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<data.length;i++) {%>
+                    <tr>
+                        <td>
+                            <%= data[i].id %>
+                        </td>
+                        <td>
+                            <%= data[i].name %>
+                        </td>
+                        <td>
+                            <%= data[i].price %>
+                        </td>
+                        <td>
+                            <button class="btn btn-info" onclick="location.href='/products/edit?id='+ <%= data[i].id %>">Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" onclick="location.href='/products/delete?id='+ <%= data[i].id %>">Del</button>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
 
 </body>
+<script>
+    function add(index) {
+        location.href = '/products/add';
+    }
+</script>
 
 </html>

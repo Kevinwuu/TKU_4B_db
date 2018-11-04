@@ -8,24 +8,21 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 
-var mysql      = require('mysql');
+var mysql = require('mysql');
 var con = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'kevin',
-  password : 'kevinxd',
-  database : 'test'
+    host: 'localhost',
+    user: 'kevin',
+    password: 'kevinxd',
+    database: 'test'
 });
 
-con.connect(function(err){
-	if(err)
-		console.log('err');
-	else{
-		console.log('sql connection sucessful.');
-		// connection.query('SELECT * FROM product_list', function(err,rows){
-		// 	console.log('ya');
-		// 	console.log(rows);
-		// });
-	}
+con.connect(function(err) {
+    if (err)
+        console.log('err');
+    else {
+        console.log('sql connection sucessful.');
+
+    }
 });
 var app = express();
 
