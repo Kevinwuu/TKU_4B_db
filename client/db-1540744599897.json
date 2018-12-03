@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "id": "1",
+      "name": "Book",
+      "price": "18"
+    },
+    {
+      "id": "2",
+      "name": "Mobile",
+      "price": "400"
+    },
+    {
+      "id": "3",
+      "name": "PC",
+      "price": "1000"
+    },
+    {
+      "id": "4",
+      "name": "PS4",
+      "price": "500"
+    },
+    {
+      "id": "5",
+      "name": "Chromebook",
+      "price": "500"
+    }
+  ]
+}
